@@ -8,9 +8,14 @@
 </head>
 <body>
 <h1>Image to Text Extractor</h1>
-<input type="file" id="imageInput" accept="image/*">
-<div id="imagePreview"></div>
-<div id="textOutput"></div>
+<div class="upload-container">
+  <label for="imageInput" class="upload-label">
+    <input type="file" id="imageInput" accept="image/*">
+    <span>Upload Image</span>
+  </label>
+</div>
+<div id="imagePreview" class="image-preview"></div>
+<div id="textOutput" class="text-output"></div>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
 <script src="app.js"></script>
 </body>
