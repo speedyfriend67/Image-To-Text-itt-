@@ -28,10 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const { data: { text } } = await Tesseract.recognize(
       file,
       'eng', // Specify language ('eng' for English)
-      { logger: m => console.log(m) } // Optional logger for progress and debugging
+      { logger: m => console.log(m), tessedit_char_whitelist: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', tessedit_pageseg_mode: '1' } // Optional logger for progress and debugging
     );
 
     // Display extracted text
     textOutput.textContent = text;
-  }
-});
+}
